@@ -3,4 +3,8 @@
 <p>Team Name: <%= @team %></p>
 <p>Team Motto: <%= @motto %></p>
 
-<p>hash <%= @hash %></p>
+<ul>
+<% @hash.each_with_index do |hero_data, index| %>
+  <li><%= hero_data[:name] %></li>
+<% end %>
+</ul>
